@@ -1,0 +1,15 @@
+<mat-card class="cardElements">
+  <mat-card-header>
+      <mat-card-title>{{heroe.nombre}}</mat-card-title>
+      <mat-card-subtitle>{{heroe.aparicion}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image [src]="heroe.img" [alt]="heroe.nombre">
+  <mat-card-content class="wrapper">
+    <p class="wrapper-overflow">
+     {{heroe.bio}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button (click)="onClick()">VIEW</button>
+  </mat-card-actions>
+</mat-card>
