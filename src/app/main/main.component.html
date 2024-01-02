@@ -1,13 +1,12 @@
-<mat-toolbar class="navbar">
-    <div class="navbarLeft">
-        <svg-logo class="svg-logo-icon"></svg-logo>
-        <h1>TECAPPSYS</h1>
-    </div>
-    <span class="navbar-spacer"></span>
-    <mat-slide-toggle #darkModeSwitch [formControl]="toggleControl">Dark Mode</mat-slide-toggle>
-</mat-toolbar>
+<app-navbar (toggleControlSwitch)="onToggleControlSwitch($event)"></app-navbar>
 
-<mat-sidenav-container class="main-container">
-  <router-outlet></router-outlet>    
+<app-toolbar></app-toolbar>
+
+<mat-sidenav-container class="sidenav-router">
+  <div class="container">    
+    <div class="col-12 ">
+      <router-outlet></router-outlet> 
+    </div>
+  </div>   
 </mat-sidenav-container>
 

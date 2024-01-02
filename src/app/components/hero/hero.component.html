@@ -1,0 +1,19 @@
+<h1>{{ hero.name | uppercase }} <small>({{ hero.appearance | date:'y' }})</small></h1>
+<hr>
+
+<div class="hero-content">
+  <div class="col-4 hero-content-lefth">
+    <img [src]="hero.img" class="img-fluid" [alt]="hero.name">
+    <button mat-raised-button [routerLink]="['/']">Back</button>
+  </div>
+  <div class="col-8">
+    <h3>{{ hero.name }}</h3>
+    <hr>
+    <p>
+      {{ hero.bio }}
+    </p>
+    <div>
+      <img class="img-logo" [src]="getImgHouse(hero.house)" [alt]="hero.house">
+    </div>
+  </div>
+</div>

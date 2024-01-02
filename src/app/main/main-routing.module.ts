@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from './main.component';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from '../components/home/home.component';
+import { HeroComponent } from '../components/hero/hero.component';
 
 const routes: Routes = [{
   path: '',
@@ -9,17 +10,17 @@ const routes: Routes = [{
   children:[
     {
       path:'',
-      redirectTo:'home',
-      pathMatch:'full'
+      pathMatch:'full',      
+      component:HomeComponent,
+      data:{
+        entity:'Hero',
+        title:'Marvel y DC'
+      }
     },
-    {
-      path:'home',
-      component:HomeComponent
-    },
+    { path: 'hero/:id', component: HeroComponent },
     // { path: 'about', component: AboutComponent },
-    // { path: 'heroe/:id', component: HeroeComponent },
-    // { path: 'buscar/:termino', component: BuscadorComponent },
-    { path: '**', pathMatch: 'full', redirectTo: 'home' }
+    // { path: 'search/:word', component: BuscadorComponent },
+    { path: '**', pathMatch: 'full', redirectTo: '' }
   ]
 }];
 

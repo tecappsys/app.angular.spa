@@ -1,0 +1,23 @@
+<mat-sidenav-container>
+    <div class="container">
+        <div class="col-12">
+            <div class="toolbar-content">
+                <div class="breadcrub">
+                    <span class="title">{{entity}}</span>
+                    <span class="sub-title">{{title}}</span>
+                </div>  
+                <div class="search">
+                    <form style="font-size: 18px">
+                        <mat-form-field>
+                              <input matInput type="search" (keyup.enter)="buscarHeroe(buscarTexto.value)" #buscarTexto placeholder="Hero">
+                              <button mat-raised-button matSuffix aria-label="search" (click)="buscarHeroe(buscarTexto.value)">
+                                SEARCH
+                            </button>
+                        </mat-form-field>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>    
+</mat-sidenav-container>
+
