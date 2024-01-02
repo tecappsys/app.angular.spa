@@ -1,9 +1,7 @@
-<div class="app-container">
-  <div class="container">
-    <div class="row">
-      <div *ngFor="let hero of heroes; index as i" class="col-3">
-        <app-hero-card (heroSelected)="onHeroSelected(i)" [hero]="hero"></app-hero-card>
-      </div>
+<div class="container">
+  <div class="row">
+    <div *ngFor="let hero of heroes; index as i" class="col-3">
+      <app-hero-card (heroSelected)="onHeroSelected(i)" [hero]="hero"></app-hero-card>
     </div>
   </div>
 </div>

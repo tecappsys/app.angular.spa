@@ -10,6 +10,7 @@ import { HeroComponent } from '../components/hero/hero.component';
 import { HeroCardComponent } from '../components/hero-card/hero-card.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { SearchHeroComponent } from '../components/search-hero/search-hero.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     HomeComponent,
     HeroComponent,
     HeroCardComponent,
-    ToolbarComponent,
+    ToolbarComponent,    
+    SearchHeroComponent,
     NavbarComponent
   ],
   imports: [

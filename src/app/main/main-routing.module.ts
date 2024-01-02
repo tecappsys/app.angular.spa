@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from './main.component';
 import { HomeComponent } from '../components/home/home.component';
 import { HeroComponent } from '../components/hero/hero.component';
+import { SearchHeroComponent } from '../components/search-hero/search-hero.component';
 
 const routes: Routes = [{
   path: '',
@@ -26,8 +27,17 @@ const routes: Routes = [{
         urlBack:'/'
       } 
     },
+    { 
+      path: 'search/:word',
+      component: SearchHeroComponent,
+      data:{
+        entity:'Search',
+        title:'',
+        urlBack:'/'
+      } 
+    },
     // { path: 'about', component: AboutComponent },
-    // { path: 'search/:word', component: BuscadorComponent },
+    
     { path: '**', pathMatch: 'full', redirectTo: '' }
   ]
 }];

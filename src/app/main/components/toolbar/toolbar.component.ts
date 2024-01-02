@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormControl } from '@angular/forms';
 import { ActivatedRouteSnapshot, ActivationEnd, Router } from '@angular/router';
 
 @Component({
@@ -8,10 +9,12 @@ import { ActivatedRouteSnapshot, ActivationEnd, Router } from '@angular/router';
 })
 export class ToolbarComponent {
 
+  public searchText = new FormControl(''); 
   public entity:string;
   public title:string;
   public urlBack:string;
   private snapshot: ActivatedRouteSnapshot;
+  private URL_SEARCH:string = '/search/';
 
   constructor( private router:Router ) { 
     this.router.events.subscribe( (event) =>{
@@ -33,8 +36,10 @@ export class ToolbarComponent {
     }
   }
 
-  public buscarHeroe( word:string ){
-    //this.router.navigate( ['/search',word] );
+  public buscarHeroe(){
+    const text = this.searchText.getRawValue();
+    this.searchText.reset();
+    this.router.navigate( [`${this.URL_SEARCH}${text ? text : ''}`] );
   }
 
   public backView(){

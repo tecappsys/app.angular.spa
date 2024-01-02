@@ -1,0 +1,12 @@
+<div class="container">
+    <div *ngIf="heroes.length>0" class="row">
+        <div *ngFor="let hero of heroes; index as i" class="col-3">
+            <app-hero-card (heroSelected)="onHeroSelected(i)" [hero]="hero"></app-hero-card>
+        </div>
+    </div>
+    <div *ngIf="heroes.length===0" class="row">
+        <div class="col-12">
+            <span>There are no results for the term: {{ wordSearch }}</span>
+        </div>
+    </div>
+</div>

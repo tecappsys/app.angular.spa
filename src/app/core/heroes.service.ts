@@ -68,10 +68,10 @@ export class HeroesService {
     return this.heroes[idx];
   }
 
-  public buscarHeroes( term:string ):Hero[]{
+  public searchHeroes( word:string ):Hero[]{
 
     let heroesArr:Hero[] = [];
-    term = term.toLowerCase();
+    word = word.toLowerCase();
 
     for( let i = 0; i < this.heroes.length; i ++ ){
 
@@ -79,7 +79,7 @@ export class HeroesService {
 
       let name = heroe.name.toLowerCase();
 
-      if( name.indexOf( term ) >= 0  ){
+      if( name.indexOf( word ) >= 0  ){
         heroe.idx = i;
         heroesArr.push( heroe )
       }

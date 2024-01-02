@@ -15,8 +15,8 @@
                 <div class="search">
                     <form style="font-size: 18px">
                         <mat-form-field>
-                              <input matInput type="search" (keyup.enter)="buscarHeroe(buscarTexto.value)" #buscarTexto placeholder="Hero">
-                              <button mat-raised-button matSuffix aria-label="search" (click)="buscarHeroe(buscarTexto.value)">
+                              <input matInput type="search" [formControl]="searchText" placeholder="Hero">
+                              <button mat-raised-button matSuffix aria-label="search" (click)="buscarHeroe()">
                                 SEARCH
                             </button>
                         </mat-form-field>

@@ -12,6 +12,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatDividerModule} from '@angular/material/divider';
+
 @NgModule({
   declarations: [
     SharedComponent
@@ -30,7 +32,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatSidenavModule,
     MatGridListModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatDividerModule
   ],
   exports:[   
     HttpClientModule,
@@ -47,6 +50,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatGridListModule,
     MatInputModule,
     MatFormFieldModule,
+    MatDividerModule,
 
     SharedComponent
   ]
