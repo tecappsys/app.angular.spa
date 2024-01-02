@@ -1,5 +1,6 @@
 import { Component, ElementRef, EventEmitter, HostBinding, Output, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { GLOBALS_PATH } from '@src/app/shared/enums/globals-path.enum';
 import { LOCAL_STORAGE_KEY } from '@src/app/shared/enums/local-storage-key.enum';
 import { THEME_UI } from '@src/app/shared/enums/theme-ui.enum';
 
@@ -29,6 +30,12 @@ export class NavbarComponent {
 
   public ngOnInit(){
     this.toggleControl.valueChanges.subscribe((darkMode)=> this.toggleControlSwitch.emit( darkMode ? true : false ) )
+  }
+
+  public navigateToHome(){
+    setTimeout(() => {
+      window.location.href = GLOBALS_PATH.SPA
+    }, 100);
   }
 
 }
