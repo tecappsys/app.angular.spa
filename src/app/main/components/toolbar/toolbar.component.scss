@@ -2,13 +2,18 @@
     display: flex;    
     justify-content: space-between;
     align-items: center;
-    padding: 24px 16px 8px 16px; 
+    padding: 24px 0; 
+}
+.side-left{
+    display: flex;
+    justify-content: center;
 }
 .breadcrub{
     display: flex;
     flex-direction: column;
     justify-content: center;
     background: transparent;
+    padding-left: 8px;
     .title{
         font-size: x-large;
         font-weight: 500;

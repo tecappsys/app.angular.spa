@@ -14,10 +14,18 @@ const routes: Routes = [{
       component:HomeComponent,
       data:{
         entity:'Hero',
-        title:'Marvel y DC'
+        title:'Marvel and DC'
       }
     },
-    { path: 'hero/:id', component: HeroComponent },
+    { 
+      path: 'hero/:id',
+      component: HeroComponent,    
+      data:{
+        entity:'Hero',
+        title:'',
+        urlBack:'/'
+      } 
+    },
     // { path: 'about', component: AboutComponent },
     // { path: 'search/:word', component: BuscadorComponent },
     { path: '**', pathMatch: 'full', redirectTo: '' }
