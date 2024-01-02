@@ -35,9 +35,7 @@ const routes: Routes = [{
         title:'',
         urlBack:'/'
       } 
-    },
-    // { path: 'about', component: AboutComponent },
-    
+    },    
     { path: '**', pathMatch: 'full', redirectTo: '' }
   ]
 }];
