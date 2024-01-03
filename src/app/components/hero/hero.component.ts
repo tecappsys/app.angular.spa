@@ -13,9 +13,6 @@ export class HeroComponent implements OnInit {
 
   public hero:Hero;
 
-  private LOGO_MARVEL ='../../assets/img/marvel-logo.png'
-  private LOGO_DC ='../../assets/img/dc-logo.jpg'
-
   public constructor(private activatedRoute: ActivatedRoute,private _heroesService: HeroesService) {}
 
   public ngOnInit() {
@@ -25,7 +22,7 @@ export class HeroComponent implements OnInit {
   }
 
   public getImgHouse(house:string){
-   return house === COMIC_HOUSE.MARVEL ? this.LOGO_MARVEL : this.LOGO_DC  
+   return house === COMIC_HOUSE.MARVEL ? 'marvel-logo.png' : 'dc-logo.jpg' 
   }
 
 
