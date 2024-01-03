@@ -34,7 +34,7 @@ export class NavbarComponent {
 
   public navigateToHome(){
     setTimeout(() => {
-      window.location.href = GLOBALS_PATH.SPA
+      window.location.href = GLOBALS_PATH.HOME
     }, 100);
   }
 
