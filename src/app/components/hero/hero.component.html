@@ -1,18 +1,24 @@
-<h1>{{ hero.name | uppercase }} <small>({{ hero.appearance | date:'y' }})</small></h1>
-<mat-divider></mat-divider>
-
-<div class="hero-content">
-  <div class="col-4">
-    <img [src]="hero.img" class="img-fluid" [alt]="hero.name" style="width: 100%;">
-  </div>
-  <div class="col-8">
-    <h3>{{ hero.name }}</h3>
-    <mat-divider></mat-divider>
-    <p>
-      {{ hero.bio }}
-    </p>
-    <div>
-      <img class="img-logo" [src]="'assets/img/'+getImgHouse(hero.house)" [alt]="hero.house">
+<div class="container">
+  <div class="row">
+    <div *ngIf="hero" class="col">
+      <div class="row">
+        <div class="col-md-4 col-sm-6 col-12">
+          <img [src]="hero.img" class="img-fluid" [alt]="hero.name" style="width: 100%;">
+        </div>
+        <div class="col">
+          <h3>{{ hero.name }} ({{ hero.appearance | date:'y' }})</h3>
+          <mat-divider></mat-divider>
+          <p>
+            {{ hero.bio }}
+          </p>
+          <div class="brand-logo">
+            <img class="img-logo" [src]="'assets/img/'+getImgHouse(hero.house)" [alt]="hero.house">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="!hero" class="col">
+      <span>There are no results</span>
     </div>
   </div>
 </div>

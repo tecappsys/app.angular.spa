@@ -12,23 +12,7 @@ A100: #80d8ff,
 300: #4fc3f7,
 200: #81d4fa,
 100: #b3e5fc,
-50: #e1f5fe,
-contrast: (
-    50: rgba(black, 0.87),
-    100: rgba(black, 0.87),
-    200: rgba(black, 0.87),
-    300: rgba(black, 0.87),
-    400: rgba(black, 0.87),
-    500: white,
-    600: white,
-    700: white,
-    800: white,
-    900: white,
-    A100: rgba(black, 0.87),
-    A200: rgba(black, 0.87),
-    A400: white,
-    A700: white,
-  )
+50: #e1f5fe
 );
 
 $green-palette:(
@@ -45,23 +29,7 @@ A100: #a7ffeb,
 300: #4db6ac,
 200: #80cbc4,
 100: #b2dfdb,
-50: #e0f2f1,
-contrast: (
-    50: rgba(black, 0.87),
-    100: rgba(black, 0.87),
-    200: rgba(black, 0.87),
-    300: rgba(black, 0.87),
-    400: rgba(black, 0.87),
-    500: white,
-    600: white,
-    700: white,
-    800: white,
-    900: white,
-    A100: rgba(black, 0.87),
-    A200: rgba(black, 0.87),
-    A400: white,
-    A700: white,
-  )
+50: #e0f2f1
 );
 
 $red-palette:(
@@ -78,21 +46,5 @@ A100: #ff8a80,
 300: #e57373,
 200: #ef9a9a,
 100: #ffcdd2,
-50: #ffebee,
-contrast: (
-    50: rgba(black, 0.87),
-    100: rgba(black, 0.87),
-    200: rgba(black, 0.87),
-    300: rgba(black, 0.87),
-    400: rgba(black, 0.87),
-    500: white,
-    600: white,
-    700: white,
-    800: white,
-    900: white,
-    A100: rgba(black, 0.87),
-    A200: rgba(black, 0.87),
-    A400: white,
-    A700: white,
-  )
+50: #ffebee
 );

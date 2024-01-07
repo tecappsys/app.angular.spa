@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl } from '@angular/forms';
 import { ActivatedRouteSnapshot, ActivationEnd, Router } from '@angular/router';
+import { RouteUrlService } from '@src/app/core/route-url.service';
 
 @Component({
   selector: 'app-toolbar',
@@ -8,20 +9,24 @@ import { ActivatedRouteSnapshot, ActivationEnd, Router } from '@angular/router';
   styleUrls: ['./toolbar.component.scss']
 })
 export class ToolbarComponent {
-
-  public searchText = new FormControl(''); 
+ 
   public entity:string;
   public title:string;
-  public urlBack:string;
+  public showBackView:boolean;
+  public urlBackView:string;
   private snapshot: ActivatedRouteSnapshot;
   private URL_SEARCH:string = '/search/';
 
-  constructor( private router:Router ) { 
+  constructor( private router:Router, private routeUrlService: RouteUrlService ) { 
     this.router.events.subscribe( (event) =>{
       if(event instanceof ActivationEnd){
         this.snapshot = event.snapshot;
         this.initData(this.snapshot)
       }
+    })
+
+    this.routeUrlService.title$.subscribe((title)=>{
+      this.title=title;
     })
   }
 
@@ -32,18 +37,13 @@ export class ToolbarComponent {
     if(entity || title){
       this.entity = entity;
       this.title = this.getTitle(title);
-      this.urlBack = this.getUrlBack(snapshot);
+      this.urlBackView = this.getUrlBack(snapshot);
+      this.showBackView = this.urlBackView ? true : false;
     }
   }
 
-  public buscarHeroe(){
-    const text = this.searchText.getRawValue();
-    this.searchText.reset();
-    this.router.navigate( [`${this.URL_SEARCH}${text ? text : ''}`] );
-  }
-
-  public backView(){
-    this.router.navigate([this.urlBack])
+  public onBackView(){
+    this.router.navigate([this.urlBackView])
   }
 
   private getUrlBack(snapshot:ActivatedRouteSnapshot):string{
@@ -61,4 +61,9 @@ export class ToolbarComponent {
     return title  
   }
 
+  public onSearch(search:string){
+    if(typeof search === 'string'){
+      this.router.navigate( [`${this.URL_SEARCH}${search}`] );
+    }     
+  }
 }

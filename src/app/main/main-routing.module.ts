@@ -23,7 +23,6 @@ const routes: Routes = [{
       component: HeroComponent,    
       data:{
         entity:'Hero',
-        title:'',
         urlBack:'/'
       } 
     },
@@ -32,7 +31,6 @@ const routes: Routes = [{
       component: SearchHeroComponent,
       data:{
         entity:'Search',
-        title:'',
         urlBack:'/'
       } 
     },    
