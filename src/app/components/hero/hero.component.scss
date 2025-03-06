@@ -1,3 +1,14 @@
+.card-ui {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border-radius: 18px;
+    overflow: hidden;
+    height: 100%;
+    position: relative;
+    margin-top: 26px;
+}
+
 .brand-logo img{
     width: 80px;
 }
