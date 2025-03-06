@@ -1,13 +1,14 @@
-<mat-card class="cardElements" (click)="onClick()">
-  <mat-card-header>
-      <div mat-card-avatar class="card-header-image" [ngStyle]="{'background-image':'url(assets/img/'+getImgHouse(hero.house)+')'}"></div>
-      <mat-card-title>{{hero.name}}</mat-card-title>
-      <mat-card-subtitle>{{hero.appearance}}</mat-card-subtitle>
-  </mat-card-header>
-  <img mat-card-image [src]="hero.img" [alt]="hero.name">
+<mat-card class="card-ui shadow-card" (click)="onClick()">
+  <div class="content-image">
+    <img mat-card-image [src]="hero.img" [alt]="hero.name">
+  </div>  
   <mat-card-content class="wrapper">
+    <div mat-card-avatar class="card-ui-thumbnail" [ngStyle]="{'background-image':'url(assets/img/'+getImgHouse(hero.house)+')'}"></div>
+    <h6>{{hero.name}}</h6>
+    <mat-card-title class="wrapper-title">{{hero.bio}}</mat-card-title>
     <p class="wrapper-overflow">
-      {{hero.bio}}
+      {{hero.appearance}}
     </p>
   </mat-card-content>
 </mat-card>
+

@@ -1,10 +1,10 @@
-<app-navbar (toggleControlSwitch)="onToggleControlSwitch($event)"></app-navbar>
+<section class="container custom-container">
+  <app-navbar (changeIsDarkTheme)="onChangeIsDarkTheme($event)" [isDarkTheme]="isDarkTheme"></app-navbar>
 
-<app-toolbar></app-toolbar>
-
-<app-spinner></app-spinner>
-
-<mat-sidenav-container class="sidenav-router">  
+  <app-toolbar></app-toolbar>
+  
+  <app-spinner></app-spinner>
+  
   <div class="container">
     <div class="row">    
       <div class="col">
@@ -12,4 +12,4 @@
       </div>
     </div>   
   </div>
-</mat-sidenav-container>
+</section>
