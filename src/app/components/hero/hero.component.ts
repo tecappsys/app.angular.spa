@@ -1,8 +1,7 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, OnInit,  } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HeroesService } from '@src/app/core/heroes.service';
-import { RouteUrlService } from '@src/app/core/route-url.service';
-import { SpinnerService } from '@src/app/core/spinner.service';
+import { RouteUrlService,SpinnerService } from '@tecappsys/library-angular';
 import { COMIC_HOUSE } from '@src/app/shared/enums/comic-house.enum';
 import { Hero } from '@src/app/shared/interface/Hero.interface';
 

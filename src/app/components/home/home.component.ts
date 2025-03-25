@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HeroesService } from '@src/app/core/heroes.service';
-import { SpinnerService } from '@src/app/core/spinner.service';
+import { SpinnerService } from '@tecappsys/library-angular';
 import { Hero } from '@src/app/shared/interface/Hero.interface';
 
 @Component({
