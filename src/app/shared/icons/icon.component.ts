@@ -9,7 +9,7 @@ import { Component, Input } from '@angular/core';
       [attr.width]="width"
       [attr.height]="height || width"
     >
-      <use [attr.xlink:href]="'node_modules/@tecappsys/styles/assets/svg/icons.svg#'+name"></use>
+      <use [attr.xlink:href]="'node_modules/@tecappsys/library-styles/svg/prueba.svg#'+name"></use>
     </svg>
   `,
 })
