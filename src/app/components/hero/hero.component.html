@@ -6,7 +6,7 @@
           <div class="col-md-4 col-sm-6 col-12">
             <img [src]="hero.img" class="img-fluid" [alt]="hero.name" style="width: 100%;">
           </div>
-          <div class="col">
+          <div class="col p-5">
             <h3>{{ hero.name }} ({{ hero.appearance | date:'y' }})</h3>
             <mat-divider></mat-divider>
             <p>
@@ -18,7 +18,7 @@
           </div>
         </div>
       </div>
-      <div *ngIf="!hero" class="col">
+      <div *ngIf="!hero" class="col pt-5">
         <span>There are no results</span>
       </div>
     </div>
